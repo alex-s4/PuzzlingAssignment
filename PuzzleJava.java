@@ -55,4 +55,19 @@ public class PuzzleJava{
         return passwordSet;
     }
 
+    /*
+     * Write a method that takes an array and mixes up all the values in a pseudo-random way. 
+     * Hint: use random indexes within the array, and swap values repeatedly.
+     */
+
+    public Object[] shuffleList(Object[] arrayInput){
+        for(var i=0; i<arrayInput.length; i++){
+            int randomInt = randMachine.nextInt(arrayInput.length);
+            Object temp = arrayInput[i];
+            arrayInput[i] = arrayInput[randomInt];
+            arrayInput[randomInt] = temp;
+        }
+        return arrayInput;
+    }
+
 }
